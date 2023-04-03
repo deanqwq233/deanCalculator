@@ -1,1 +1,1 @@
-E:\VisualStudios\deanCalculator\deanCalculator\x64\Release\deanCalculator.exe
+D:\Desktop\deanCalculator-main\x64\Release\deanCalculator.exe

@@ -1,7 +1,7 @@
 ﻿/*
 	Name: 多功能计算器v3.0番茄钟更新
 	Author: deanqwq233
-	Date: 20220327
+	Date: 20230403
 */
 #include<cstdio>
 #include<windows.h>
@@ -24,9 +24,10 @@ int main()
 	cout << "于" << time.wYear << "年" << time.wMonth << "月" << time.wDay << "日" << time.wHour << "时" << time.wMinute << "分" << time.wSecond << """秒启动" << endl;
 	for (;;)
 	{
+		system("color 0F");
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_RED | FOREGROUND_BLUE);
-		cout << "高级计算器ver2.1  by deanqwq233" << endl;
-		system("title 多功能计算器v3.0番茄钟更新");
+		cout << "多功能计算器v3.0  by deanqwq233" << endl;
+		system("title 功能选择");
 		cout << "执行任务完成后程序会自动重置，无需重启程序。" << endl;
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN | FOREGROUND_BLUE);
 		cout << "功能合集：" << endl;
@@ -60,6 +61,7 @@ int main()
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN | FOREGROUND_BLUE);
 		if (n == 1)
 		{
+			system("title 加法");
 			cout << "请输入第一个加数：";
 			cin >> a;
 			cout << endl;
@@ -70,6 +72,7 @@ int main()
 		}
 		if (n == 2)
 		{
+			system("title 减法");
 			cout << "请输入第一个减数：";
 			cin >> a;
 			cout << endl;
@@ -80,6 +83,7 @@ int main()
 		}
 		if (n == 3)
 		{
+			system("title 乘法");
 			cout << "请输入第一个乘数：";
 			cin >> a;
 			cout << endl;
@@ -90,6 +94,7 @@ int main()
 		}
 		if (n == 4)
 		{
+			system("title 除法");
 			cout << "请输入被除数：";
 			cin >> a;
 			cout << endl;
@@ -98,6 +103,7 @@ int main()
 			cout << endl;
 			if (b == 0)
 			{
+				system("title 好啊");
 				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_RED);
 				cout << "都说了不为零，怎么就那么倔呢？" << endl;
 				cout << "得想个办法治一治，要不把程序结束了吧……" << endl;
@@ -107,6 +113,7 @@ int main()
 		}
 		if (n == 5)
 		{
+			system("title 乘方");
 			cout << "请输入幂的底数：";
 			cin >> a;
 			cout << endl;
@@ -117,6 +124,7 @@ int main()
 		}
 		if (n == 6)
 		{
+			system("title 根号");
 			cout << "请输入要被开方的数：";
 			cin >> a;
 			cout << endl;
@@ -124,6 +132,7 @@ int main()
 		}
 		if (n == 7)
 		{
+			system("title 圆");
 			cout << "请输入所求圆的半径：";
 			cin >> r;
 			cout << endl;
@@ -132,6 +141,7 @@ int main()
 		}
 		if (n == 8)
 		{
+			system("title 矩形");
 			cout << "请输入所求矩形的长：";
 			cin >> a;
 			cout << endl;
@@ -143,6 +153,7 @@ int main()
 		}
 		if (n == 9)
 		{
+			system("title 长方体");
 			cout << "请输入所求长方体的长：";
 			cin >> a;
 			cout << endl;
@@ -157,33 +168,40 @@ int main()
 		}
 		if (n == 10)
 		{
+			system("title 圆柱体");
 			cout << "请输入所求圆柱体的底面半径：";
 			cin >> r;
 			cout << endl;
 			cout << "请输入所求圆柱体的高：";
 			cin >> h;
+			cout << endl;
 			cout << "表面积为：" << 2 * pai * r * h + pai * r * r * 2 << endl;
 			cout << "体积为：" << pai * r * r * h << endl;
 		}
 		if (n == 11)
 		{
+			system("title 圆锥体");
 			cout << "请输入所求圆锥体的底面半径：";
 			cin >> r;
 			cout << endl;
 			cout << "请输入所求圆锥体的高：";
 			cin >> h;
+			cout << endl;
 			cout << "请输入所求圆锥体的母线长度：";
 			cin >> l;
+			cout << endl;
 			cout << "表面积为：" << pai * r * r + pai * r * l << endl;
 			cout << "体积为：" << pai * r * r * h / 3 << endl;
 		}
 		if (n == 12)
 		{
+			system("title 音乐");
 			cout << "播放中……" << endl;
 			yinjie();
 		}
 		if (n == 13)
 		{
+			system("title 音乐");
 			cout << "播放中……" << endl;
 			awzh();
 		}
@@ -193,6 +211,7 @@ int main()
 		}
 		if (n == 15)
 		{
+			system("title 关机");
 			cout << "最后一次确认：是否关闭计算机(是Y/否N)：";
 			cin >> jsj;
 			if (jsj == 'Y')
@@ -207,6 +226,7 @@ int main()
 		}
 		if (n == 16)
 		{
+			system("title 重启");
 			cout << "最后一次确认：是否重新启动计算机(是Y/否N)：";
 			cin >> jsj;
 			if (jsj == 'Y')
@@ -221,6 +241,7 @@ int main()
 		}
 		if (n == 17)
 		{
+			system("title 注销");
 			cout << "最后一次确认：是否注销此系统账户(是Y/否N)：";
 			cin >> jsj;
 			if (jsj == 'Y')
@@ -239,6 +260,7 @@ int main()
 		}
 		if (n == 19)
 		{
+			system("title 再见");
 			cout << "感谢使用，再见！" << endl;
 			cout << "本次使用高级计算器" << (double)clock() / CLOCKS_PER_SEC << "秒" << endl;
 
@@ -346,6 +368,7 @@ int awzh(void)
 }
 int saolei(void)
 {
+	system("title 寄");
 	bool a[10][10], b[10][10];
 	int n = 0;
 	int x, y, i, j, h, s, k;
@@ -357,7 +380,7 @@ int saolei(void)
 		}
 		cout << endl;
 	}
-	for (i = 1; i <= 10;)
+	for (i = 1; i <= 10; i++)
 	{
 		h = (rand() % (9)) + 1;
 		s = (rand() % (9)) + 1;
@@ -461,10 +484,6 @@ void fullscreen()
 void fanqie()
 {
 	fullscreen();
-	system("title 关于BUG......");
-	cout << "关于BUG的提示......" << endl;
-	cout << "在最后计时完成时可能程序没有正常退出" << endl;
-	cout << "请使用ALT+F4手动退出。" << endl;
 	cout << "                                                                 *=@@\******" << endl;
 	cout << "                                                                ***@@@@@]***" << endl;
 	cout << "                                                                    =@@/@@^*****" << endl;
@@ -525,7 +544,7 @@ void fanqie()
 	system("color 9F"); Sleep(50);
 	system("pause");
 	system("cls");
-	system("title 奇妙小番茄钟 v1.0.3");
+	system("title 番茄钟");
 	int n, m, i;
 	cout << "请输入你想专注的时间，以整分钟为单位：";
 	cin >> n;
@@ -587,6 +606,7 @@ void fanqie()
 	cout << "时间到了，感谢使用" << endl;
 	Beep(200, 1000);
 	cout << "正在启动资源管理器......" << endl;
-	cout << "请手动按ALT+F4退出" << endl;
+	mainstart: main();
 	system("explorer.exe");
+	goto mainstart;
 }
