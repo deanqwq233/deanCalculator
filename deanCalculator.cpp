@@ -1,5 +1,5 @@
 ﻿/*
-	Name: 多功能计算器v4.0番茄钟更新
+	Name: 多功能计算器v4.1
 	Author: deanqwq233
 	Date: 20230403
 */
@@ -26,9 +26,11 @@ int main()
 	{
 		system("color 0F");
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_RED | FOREGROUND_BLUE);
-		cout << "多功能计算器v4.0  by deanqwq233" << endl;
+		cout << "多功能计算器v4.1  by deanqwq233" << endl;
+		cout << "本程序为开源项目，如果你觉得有用请给个Star"<<endl;
+		cout << "https://github.com/deanqwq233/deanCalculator/" << endl;
 		system("title 功能选择");
-		cout << "执行任务完成后程序会自动重置，无需重启程序。" << endl;
+		cout << "执行任务完成后程序会自动重置，无需重启程序" << endl;
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN | FOREGROUND_BLUE);
 		cout << "功能合集：" << endl;
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN);
@@ -53,7 +55,7 @@ int main()
 		cout << "16为重启计算机系统" << endl;
 		cout << "17为注销此系统账户" << endl;
 		cout << "18为启动番茄钟" << endl;
-		cout << "19为退出多功能计算器v4.0" << endl;
+		cout << "19为退出多功能计算器v4.1" << endl;
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN | FOREGROUND_BLUE);
 		cout << "请输入功能编号：";
 		cin >> n;
